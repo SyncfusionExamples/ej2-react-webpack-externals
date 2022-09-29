@@ -1,5 +1,5 @@
 # ej2-react-webpack-externals
-Demo sample for the EJ2 react webpack externals
+Demo sample for the EJ2 react webpack externals. To get further information, check out the [getting started](https://ej2.syncfusion.com/react/documentation/getting-started/webpack-externals/) document.
 
 ## Installation
 

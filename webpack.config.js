@@ -1,4 +1,4 @@
-const path =  require('path');
+const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -6,7 +6,20 @@ module.exports = {
     output: {
         path: path.join(__dirname, '/build'),
         filename: 'bundles.js',
-        libraryTarget: 'umd',
+        library: {
+            type: 'umd'
+        },
+        clean: true
+    },
+    devServer: {
+        static: {
+            directory: path.join(__dirname, 'build'),
+        },
+        compress: true,
+        port: 9000,
+        open: true,
+        hot: true,
+        historyApiFallback: true
     },
     plugins: [
         new HTMLWebpackPlugin({
@@ -21,7 +34,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
@@ -31,5 +44,8 @@ module.exports = {
                 }
             },
         ]
+    },
+    resolve: {
+        extensions: ['.js', '.jsx']
     }
 }

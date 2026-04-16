@@ -1,16 +1,18 @@
 # ej2-react-webpack-externals
 
-Repository Description: Demo showing how to use Syncfusion EJ2 React with webpack externals to reduce bundle size.
-
-## Project Overview
-
 This sample demonstrates configuring webpack to treat Syncfusion libraries as externals so that the application bundle excludes large library code and instead references those resources at runtime. The project contains a simple React entry under `src/` and a `webpack.config.js` that shows the externals configuration.
 
-## Features
 
-- Example webpack externals setup for Syncfusion EJ2 React
-- Minimal React sample files in `src/` demonstrating component rendering
-- Scripts for install, run, and production build
+# Features
+
+- Example Webpack externals setup for Syncfusion EJ2 React components  
+- Demonstrates excluding large Syncfusion libraries from the application bundle  
+- Minimal React sample files in `src/` illustrating component rendering and usage  
+- Webpack configuration showing how to map Syncfusion packages as externals  
+- Reduced bundle size by loading Syncfusion resources at runtime (e.g., via CDN or external scripts)  
+- Suitable for optimizing performance and improving caching in React applications  
+- npm scripts included for dependency installation, development run, and production build  
+
 
 ## Prerequisites
 
@@ -37,9 +39,3 @@ npm start
 ```bash
 npm run build
 ```
-
-## How it works
-
-Webpack is configured to mark Syncfusion packages as externals so the generated `bundle.js` contains only your application code. The sample `src/index.html` loads the required external scripts or CDN-hosted packages at runtime as shown in the `src/` folder.
-
-For more details, see the Syncfusion docs: https://ej2.syncfusion.com/react/documentation/getting-started/webpack-externals/

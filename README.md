@@ -1,4 +1,4 @@
-# ej2-react-webpack-externals
+# Essential JS2 React Sample with Webpack Externals
 
 This sample demonstrates configuring webpack to treat Syncfusion libraries as externals so that the application bundle excludes large library code and instead references those resources at runtime. The project contains a simple React entry under `src/` and a `webpack.config.js` that shows the externals configuration.
 
